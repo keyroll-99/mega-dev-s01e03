@@ -1,3 +1,19 @@
+# S01E03 delivery · what it shows
+
+- **Signed KB source:** [kb.svx](kb.svx)
+- **Page as the desk sees it, standalone HTML:** [kb.html](kb.html)
+- [Canonical KB route source](src/routes/kb/incidents/4471-review/+page.svx)
+- [Interactive rendered site](rendered/kb/incidents/4471-review/index.html)
+- [Parser · 379 reports · fixed](https://github.com/keyroll-99/mega-dev-s01e03/issues/1)
+- [Hint · 33 reports · won't fix, form retired](https://github.com/keyroll-99/mega-dev-s01e03/issues/2)
+
+`kb.svx` is generated from the canonical route source. `kb.html` is the actual server-rendered
+page with its generated CSS inlined, so it can be downloaded and opened directly. Its controls
+are static; serve `rendered/` over HTTP for the interactive version. Regenerate both with
+`node scripts/export-delivery.mjs` after `npm run build`.
+
+---
+
 # kb — the support knowledge base
 
 **kb** = knowledge base. What the support desk knows about how our products break, written
