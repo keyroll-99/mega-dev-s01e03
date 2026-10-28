@@ -1,0 +1,39 @@
+---
+layout: runbook
+title: '#4471 · dates parse mm/dd in eu locales'
+owner: support desk
+status: split
+reviewed: '2026-10-28'
+signature: 'keyroll-99 / Codex'
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+The desk originally recorded this as one known parser defect with one fix queued.
+That conclusion was incomplete: the running table below separates parser and booking-form
+hint causes. See the [signed review and engineering tickets](/kb/incidents/4471-review).
+
+<Callout kind="warn">
+Split by cause. A parser fix alone does not resolve the booking-v3 hint mismatch.
+</Callout>
+
+## What was merged
+
+<CauseTable ticket={4471} />
+
+## Since April
+
+<QueueTimeline ticket={4471} to="2026-11-02" />
+
+## Lessons
+
+- Group by supported cause, not matching subject or ticket size.
+- Receipt time and merge time answer different questions.
+- Preserve contradictory reports and recompute counts as the desk keeps working.
+
+<RenderStamp {signature} />

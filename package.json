@@ -1,0 +1,22 @@
+{
+  "name": "mega-dev-s01e03-support-kb",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "analyse": "node --experimental-strip-types scripts/analyse.ts"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^3.0.0",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^6.0.0",
+    "mdsvex": "^0.12.6",
+    "svelte": "^5.0.0",
+    "typescript": "^5.0.0",
+    "vite": "^7.0.0"
+  }
+}

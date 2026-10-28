@@ -1,0 +1,45 @@
+---
+layout: runbook
+title: 'Triage: duplicate reports'
+owner: support desk
+status: accepted
+reviewed: '2026-10-28'
+signature: 'keyroll-99 / Codex'
+---
+
+<script>
+  import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+A busy morning brings hundreds of reports about the same thing. We keep one ticket per issue
+and merge every duplicate into it, so engineering sees one thread with a count.
+
+## The rule
+
+A report is a duplicate when evidence supports the **same cause**, under
+[decision 0002](/kb/decisions/0002-dedupe-by-cause). This replaces the subject-only rule in
+[historical decision 0001](/kb/decisions/0001-dedupe-by-subject).
+
+1. Deduplicate overlapping export rows by report ID.
+2. Look up the tenant's locale and booking form, and check the report channel.
+3. Use `causeOf` and compare mechanisms with `sameCause`; inspect the body for contradictions.
+4. Merge only supported same-cause reports. Different or unknown causes stay apart.
+5. Keep engineering tickets, computed counts and the rendered KB current as reports arrive.
+
+<Callout>
+Subjects help find reports; they do not establish duplicate causes. Intake tags and browser
+locales are guesses. See the [review of #4471](/kb/incidents/4471-review).
+</Callout>
+
+## Try it
+
+<DedupeExplorer />
+
+## When you are unsure
+
+Keep it apart for review. Record what is missing or contradictory. Do not turn uncertainty
+into a confirmed root cause or hide it in a known ticket.
+
+<RenderStamp {signature} />

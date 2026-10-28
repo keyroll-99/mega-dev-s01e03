@@ -1,0 +1,42 @@
+---
+layout: runbook
+title: '0002 · Deduplicate by cause and evidence'
+owner: keyroll-99
+status: accepted
+reviewed: '2026-10-28'
+signature: 'keyroll-99 / Codex'
+---
+
+<script>
+  import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+**Date:** 28 October 2026 · **Scope:** this exported KB and its triage guidance.
+**Replaces:** [decision 0001](/kb/decisions/0001-dedupe-by-subject), preserved as accepted history.
+This record does not claim the course's live desk or production software has been changed.
+
+## Context
+
+The [review of #4471](/kb/incidents/4471-review) shows distinct mechanisms behind matching
+subjects. Browser-derived intake labels also disagree with tenant-specific classification.
+A merge can conceal a different defect and leave it without an engineering ticket.
+
+## Decision
+
+Deduplicate by supported cause, not subject equality. Join the tenant directory and compare
+channel, form version and locale using the supplied `causeOf`/`sameCause` functions. Read
+report bodies before merging to retain contradictory or unexplained evidence. Keep one
+engineering issue per established cause, with counts based on distinct report IDs.
+
+## Consequences
+
+- Same subject with different causes stays in separate tickets.
+- Different subjects with the same supported mechanism can share a ticket.
+- Unknown tenants and unexplained symptoms need review; “no cause” is not a matching cause.
+- New reports or tenant changes require recomputing counts and rebuilding the KB.
+- This needs more desk attention than subject-only matching, but avoids hiding a second fix.
+
+<DedupeExplorer />
+
+<RenderStamp {signature} />
