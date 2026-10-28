@@ -87,3 +87,10 @@ Open `/kb/incidents/4471-review/` in the preview. To inspect the committed rende
 run `python3 -m http.server 4174 --directory rendered` and open the same path.
 Serve the directory over HTTP: the generated asset and route URLs are root-relative.
 No paid services, account creation or external production changes are needed.
+
+### Course-issued signature
+
+The incident review uses the exact signing proof supplied by the course's `start-challenge`
+tool in its `signature` frontmatter. The author's handle is not a substitute for that proof.
+`RenderStamp` derives the desk reference from this signature during the actual Svelte render.
+The local working log and separate proof file are outside this public repository.

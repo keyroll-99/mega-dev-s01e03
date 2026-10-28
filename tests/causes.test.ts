@@ -44,3 +44,11 @@ test('signature is computed and old accepted decision is stale', () => {
   assert.equal(deskRef('keyroll-99 / Codex'), deskRef('  keyroll-99 / Codex  '));
   assert.ok(daysSince('2024-06-11', new Date('2026-10-28T12:00:00Z')) > 180);
 });
+test('review uses the actual course-issued signing proof, not an author label', () => {
+  const source = readFileSync(new URL('../src/routes/kb/incidents/4471-review/+page.svx', import.meta.url), 'utf8');
+  const signature = source.match(/^signature: '([^']+)'$/m)?.[1];
+  assert.ok(signature?.startsWith('v1.'));
+  const payload = JSON.parse(Buffer.from(signature!.split('.')[1], 'base64url').toString());
+  assert.equal(payload.aud, 'challenge:what-it-shows');
+  assert.ok(source.trimEnd().endsWith('<RenderStamp {signature} />'));
+});

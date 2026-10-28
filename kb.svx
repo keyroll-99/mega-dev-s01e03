@@ -4,7 +4,7 @@ title: '#4471 reviewed · one subject is not one cause'
 owner: keyroll-99
 status: closed
 reviewed: '2026-10-28'
-signature: 'keyroll-99 / Codex'
+signature: 'v1.eyJzdWIiOiIzNTE2IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMxODA1NjksImV4cCI6MTc5MzI2Njk2OX0.u7kskfTGXleADIBO3asuevAqRm4m7kPO89PUedVNjPI'
 ---
 
 <script>
@@ -102,7 +102,8 @@ The source of computed values is `src/lib/data`; classification stays in `src/li
 
 When reports, tenant configuration or desk notes change, rerun the analysis, reconcile issue
 counts, re-read uncertain bodies and rebuild the page. Do not copy an old rendered count into
-new prose. This page is signed by the GitHub owner working with Codex; the desk reference below
-is computed by `RenderStamp` from the signature, not typed in.
+new prose. The author is keyroll-99 working with Codex. The frontmatter signature is the exact
+course-issued signing proof. The desk reference below is computed by `RenderStamp` from that
+proof, not typed in.
 
 <RenderStamp {signature} />

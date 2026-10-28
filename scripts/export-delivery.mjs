@@ -14,6 +14,6 @@ writeFileSync('kb.html', html);
 writeFileSync('delivery.json', JSON.stringify({
   source: 'kb.svx', rendered: 'kb.html',
   canonicalSource: sourcePath, interactiveRendered: 'rendered/kb/incidents/4471-review/index.html',
-  signature: 'keyroll-99 / Codex'
+  signatureSource: 'kb.svx frontmatter (exact course-issued proof)'
 }, null, 2) + '\n');
 console.log('Exported canonical source to kb.svx and actual styled SSR output to standalone kb.html.');
