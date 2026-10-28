@@ -1,3 +1,5 @@
+**Current resolution — FIXED (5 October 2026).** The desk reports `fix(dates): parse dd/mm for eu locales`. GitHub issue #1 is closed as completed. This desk update postdates the export; the counts below remain historical. Source: https://hq.mega.dev/challenges/what-it-shows
+
 ## Problem
 The shared parser interprets numeric dates as month/day even for day-first tenants. Calendar invites and reminders can swap the intended day and month. This is the parser defect represented by the majority of source ticket **#4471**, not the booking-v3 hint defect tracked separately.
 

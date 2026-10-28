@@ -2,7 +2,7 @@
 layout: runbook
 title: '#4471 · dates parse mm/dd in eu locales'
 owner: support desk
-status: split
+status: closed
 reviewed: '2026-10-28'
 signature: 'keyroll-99 / Codex'
 ---
@@ -19,7 +19,9 @@ That conclusion was incomplete: the running table below separates parser and boo
 hint causes. See the [signed review and engineering tickets](/kb/incidents/4471-review).
 
 <Callout kind="warn">
-Split by cause. A parser fix alone does not resolve the booking-v3 hint mismatch.
+Engineering update: #4471 closed on 5 October 2026. Parser FIXED:
+fix(dates): parse dd/mm for eu locales. Hint WON'T FIX: booking-v3 form retired.
+The two causes have different resolutions; the export table remains historical evidence.
 </Callout>
 
 ## What was merged

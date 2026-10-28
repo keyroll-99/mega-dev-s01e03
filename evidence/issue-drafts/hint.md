@@ -1,3 +1,5 @@
+**Current resolution — WON'T FIX (5 October 2026).** The desk reports booking-v3 form retired. GitHub issue #2 is closed as not planned, not as a delivered hint fix. This supersedes the initial completed closure; the counts below remain historical. Source: https://hq.mega.dev/challenges/what-it-shows
+
 ## Problem
 The **booking-v3** date field prints **MM/DD/YYYY** for day-first tenants, but interprets form input using the tenant's day-first convention. Following the hint swaps month and day. This is a different defect from the shared parser tracked in source ticket #4471 and needs its own fix.
 

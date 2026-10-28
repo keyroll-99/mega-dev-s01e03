@@ -47,6 +47,9 @@ Exported 2026-10-04 from the `support` repo, `apps/kb/` → `src/`.
 
 The source snapshot has 427 rows / 412 unique report IDs: 379 parser and 33 hint.
 Five unexplained timing accounts stay included under parser, explicitly flagged for follow-up.
+The later engineering update on the Challenge page says #4471 closed on 5 October 2026:
+parser FIXED (`fix(dates): parse dd/mm for eu locales`); hint WON'T FIX (booking-v3 retired).
+Issue #1 is closed as completed. Issue #2 is closed as not planned, not as a delivered fix.
 The rendered summary, table, timeline, explorer and signature reference use the supplied logic
 at build/render time; they are not hand-copied numbers.
 
