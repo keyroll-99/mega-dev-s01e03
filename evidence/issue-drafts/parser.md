@@ -26,3 +26,13 @@ Intake tags are guesses: these 379 include 356 tagged `parser` and 23 tagged `hi
 
 ## Reproducible audit
 Run `npm run analyse` and `npm test`. `evidence/analysis.json` lists every covered report ID. Signed KB review: `src/routes/kb/incidents/4471-review/+page.svx`; rendered page: `rendered/kb/incidents/4471-review/index.html`.
+
+## KB handoff
+
+- [Signed KB page source (.svx)](https://github.com/keyroll-99/mega-dev-s01e03/blob/main/kb.svx)
+- [Rendered KB page (download and open HTML)](https://github.com/keyroll-99/mega-dev-s01e03/blob/main/kb.html)
+- [Canonical KB route](https://github.com/keyroll-99/mega-dev-s01e03/blob/main/src/routes/kb/incidents/4471-review/%2Bpage.svx)
+- [Report membership audit](https://github.com/keyroll-99/mega-dev-s01e03/blob/main/evidence/analysis.json)
+
+The KB records both cause counts, the engineering update, the distinct closure reasons,
+and the preserved uncertainty around the five unusual timing accounts.
